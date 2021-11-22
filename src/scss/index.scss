@@ -8,10 +8,22 @@ Settings
 @import "base/classes";
 @import "base/typography";
 
-body{
-	background-color: var(--color-black);
-	color: var(--color-white);
-	font-size: 2rem;
-	font-family: var(--font-base);
-	//background-image: url(../images/1.jpg);
-}
+/*
+Libs
+ */
+@import "libs/grid.min.css";
+@import "../../node_modules/plyr/dist/plyr.css";
+
+/*
+Components
+ */
+@import "components/index";
+
+/*
+Pages
+ */
+@import "pages/home/index";
+@import "pages/work/index";
+@import "pages/case/index";
+@import "pages/about/index";
+@import "pages/contact/index";

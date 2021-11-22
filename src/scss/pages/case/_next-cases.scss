@@ -1,0 +1,14 @@
+.cases{
+		&-next{
+			position: static;
+			padding: 145px 0 73px;
+				.cases{
+					padding-top: 170px;
+						&-box{
+							&:nth-child(even){
+								margin-top: -90px;
+							}
+						}
+				}
+		}
+}

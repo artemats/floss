@@ -119,7 +119,8 @@ textarea {
 }
 
 button,
-input {
+input,
+textarea{
   overflow: visible;
     &:focus{
       outline: none;
@@ -256,12 +257,13 @@ blockquote {
 }
 
 button {
-  &:hover {
-    cursor: pointer;
-  }
-  &:focus {
-    outline: none;
-  }
+  cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline: none;
+    }
 }
 
 input[type='date'] {

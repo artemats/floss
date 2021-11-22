@@ -1,0 +1,37 @@
+.case-detail{
+	padding: 40px 0;
+		&-description{
+			padding-top: 70px;
+			p{
+				&:not(:last-child){
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&-author{
+			display: flex;
+			align-items: center;
+			padding-top: 70px;
+				.case-author{
+					&:not(:last-child){
+						margin-right: 110px;
+					}
+				}
+		}
+		.container{
+			position: relative;
+		}
+		.gradient{
+			position: absolute;
+			bottom: -235px;
+			left: -140px;
+			width: 634px;
+			height: 634px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			background-image: url(../images/gradient/case/case-2.svg);
+			opacity: .1;
+			pointer-events: none;
+		}
+}

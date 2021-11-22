@@ -1,7 +1,26 @@
 :root {
   --color-black:                          #0B0B0B;
+  --color-black-100:                      #121212;
   --color-white:                          #FFFFFF;
+  --color-grey:                           #808080;
+  --color-grey-100:                       #404040;
+  --color-grey-200:                       #404040;
+  --color-grey-300:                       #383838;
+  --color-gradient-1:                     #B996C8;
+  --color-gradient-2:                     #B9D7EF;
+  --color-gradient-3:                     #779CBA;
   --font-base:                            'Roobert-Regular';
+  --gradient-duration:                    .5s;
+  --gradient-ease:                        ease;
+  --move-duration:                        .3s;
+  --move-ease:                            ease;
+  --cube-duration:                        1s;
+  --cube-ease:                            ease-out;
+  --opacity-duration:                     .3s;
+  --opacity-ease:                         ease-out;
 }
 
 //$minHeight:                               880;
+$hoverWidth:                              991;
+$xlg:                                     1920;
+$lg:                                      1600;

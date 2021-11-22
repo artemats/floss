@@ -1,0 +1,18 @@
+.hero-about{
+	//min-height: 750px;
+	padding: 302px 0 193px;
+		.hero{
+				&-title{
+					margin-bottom: 55px;
+				}
+				&-description{
+					max-width: 300px;
+					margin-left: 112px;
+				}
+		}
+		.container{
+			position: relative;
+			z-index: 1;
+			pointer-events: none;
+		}
+}

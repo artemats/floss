@@ -1,0 +1,55 @@
+.btn{
+	display: inline-block;
+	white-space: nowrap;
+	height: 62px;
+	line-height: 60px;
+	font-size: 18px;
+	padding: 0 30px;
+	border: none;
+	position: relative;
+	background-color: transparent;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: transparent;
+			pointer-events: none;
+			border: 1px solid transparent;
+			border-image-slice: 1;
+			transition: opacity var(--opacity-duration) var(--opacity-ease);
+		}
+		&:before{
+			border-image-source: linear-gradient(270deg, #E5E5E5 0%, #CAAAD2 23.57%, #B996C8 49.25%, #BACBE7 100%);
+		}
+		&:after{
+			border-image-source: linear-gradient(270deg, #CAAAD2 0%, #13C0FE 44.27%, #BACBE7 64.06%, #B996C8 100%);
+			opacity: 0;
+		}
+		&-title{
+			display: inline-block;
+			background: linear-gradient(90deg, #BACBE7 21.2%, #B996C8 44.18%, #CAAAD2 75.37%, #98C1ED 100%);
+			background: -webkit-linear-gradient(90deg, #BACBE7 21.2%, #B996C8 44.18%, #CAAAD2 75.37%, #98C1ED 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		&.full-width{
+			width: 100%;
+		}
+		@include hover($hoverWidth){
+			&:hover{
+				.btn-title{
+					background: -webkit-linear-gradient(90deg, #B996C8 23.66%, #BACBE7 49.11%, #98C1ED 69.22%, #CAAAD2 95.9%);
+					background: linear-gradient(90deg, #B996C8 23.66%, #BACBE7 49.11%, #98C1ED 69.22%, #CAAAD2 95.9%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				&:before{
+					opacity: 0;
+				}
+				&:after{
+					opacity: 1;
+				}
+			}
+		}
+}

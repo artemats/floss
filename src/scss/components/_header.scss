@@ -1,0 +1,27 @@
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 40px;
+	z-index: 3;
+		&-logo{
+			display: inline-block;
+		}
+		&-nav{
+			padding: 12px 0;
+			ul{
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+			li{
+				&:not(:last-child){
+					margin-right: 65px;
+				}
+			}
+			a{
+				@extend .link;
+			}
+		}
+}

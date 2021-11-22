@@ -1,0 +1,37 @@
+.input{
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px var(--color-grey-100) solid;
+	color: var(--color-white);
+	font-size: 18px;
+	font-family: var(--font-base);
+	height: 56px;
+	padding: 0;
+		&-container{
+			position: relative;
+			padding-bottom: 30px;
+		}
+		&-label{
+			display: inline-block;
+			transition: top var(--move-duration) var(--move-ease), font-size var(--move-duration) var(--move-ease), color var(--move-duration) var(--move-ease);
+			position: absolute;
+			left: 0;
+			top: 12px;
+			pointer-events: none;
+		}
+		&.is-focus{
+				& ~ .label,
+				& ~ label{
+					font-size: 14px;
+					color: var(--color-grey-200);
+					top: -10px;
+				}
+		}
+}
+
+.textarea{
+	@extend .input;
+	padding-top: 15px;
+	height: 80px;
+}

@@ -1,0 +1,42 @@
+.text-switcher{
+	position: relative;
+	width: 800px;
+	height: 126px;
+	transform-style: preserve-3d;
+	transform: translateZ(-50px) rotateX(0deg);
+	display: inline-block;
+		&-item{
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			opacity: 0;
+				&:nth-child(1){
+					transform: rotate3d(0, 0, 0, 0deg) translate3d(0,0,50px);
+				}
+				&:nth-child(2){
+					transform: rotate3d(1, 0, 0, 90deg) translate3d(0,0,50px);
+				}
+				&:nth-child(3){
+					transform: rotate3d(1, 0, 0, 180deg) translate3d(0,0,50px);
+				}
+				&:nth-child(4){
+					transform: rotate3d(1, 0, 0, -90deg) translate3d(0,0,50px);
+				}
+				&[data-current]{
+					opacity: 1;
+				}
+		}
+		&-overlay{
+			display: inline-block;
+			height: 126px;
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		&.with-transition{
+			.text-switcher-item{
+				transition: opacity var(--cube-duration) var(--cube-ease);
+			}
+		}
+}

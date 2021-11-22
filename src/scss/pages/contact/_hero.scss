@@ -1,0 +1,22 @@
+.hero-contact{
+	padding-top: 182px;
+		.gradient{
+		position: absolute;
+		width: 840px;
+		height: 896px;
+		top: 20px;
+		left: -180px;
+		transform: translateX(50%);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-image: url(../images/gradient/clients-gradient.svg);
+		pointer-events: none;
+		opacity: .1;
+	}
+		.section{
+				&-title{
+					margin-bottom: 40px;
+				}
+		}
+}

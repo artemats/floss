@@ -1,0 +1,17 @@
+.hero.__home{
+	padding: 238px 0;
+	position: relative;
+		.hero{
+				&-description{
+					max-width: 296px;
+					margin-left: 112px;
+					padding-top: 23px;
+				}
+		}
+		// For dynamic gradient //
+		.container{
+			position: relative;
+			pointer-events: none;
+			z-index: 1;
+		}
+}

@@ -1,0 +1,67 @@
+.cases{
+	margin: 0 -127px;
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 130px;
+		&-box{
+			padding: 0 47px 47px;
+			width: 55%;
+				&-item{
+					display: block;
+					position: relative;
+				}
+				&:nth-child(1),
+				&:nth-child(4n + 4),
+				&:nth-child(4n + 5){
+					width: 45%;
+				}
+				&:nth-child(even){
+					margin-top: -40px;
+				}
+		}
+		&-all{
+			position: static;
+			padding: 212px 0 155px;
+				.cases{
+					&-box{
+						&:not(:last-child):not(:nth-last-child(2)){
+							margin-bottom: 70px;
+						}
+					}
+				}
+				.gradient{
+					position: absolute;
+					width: 894px;
+					height: 954px;
+					top: -115px;
+					right: 45%;
+					transform: translateX(50%);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+					background-image: url(../images/gradient/clients-gradient.svg);
+					pointer-events: none;
+					opacity: .1;
+				}
+		}
+		&-action{
+			text-align: center;
+			padding: 25px 0;
+		}
+		&.with-hover{
+			.case{
+					&-content{
+						opacity: 0;
+						transform: translateY(20px);
+						transition: opacity .5s ease-out, transform .5s ease-out;
+					}
+					&:hover{
+							.case-content{
+								opacity: 1;
+								transform: translateY(0);
+								transition-delay: .1s;
+							}
+					}
+			}
+		}
+}

@@ -1,0 +1,13 @@
+.subscribe{
+		&-form{
+			max-width: 416px;
+			width: 100vw;
+			padding: 40px 0;
+		}
+		input{
+			@extend .input;
+		}
+		label{
+			@extend .input-label;
+		}
+}

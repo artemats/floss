@@ -28,10 +28,385 @@
 </head>
 <body>
 
-<div id="root">
-	<h1>We are specialized in CGI Animation</h1>
-	<img src="images/logo.svg" alt="" />
-</div>
+<main id="wrapper">
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<a href="index.html" class="header-logo">
+						<img src="images/logo.svg" alt="Floss creatives" />
+					</a>
+				</div>
+				<div class="col-6">
+					<div class="header-nav">
+						<nav>
+							<ul>
+								<li>
+									<a href="about.html">Who we are</a>
+								</li>
+								<li>
+									<a href="work.html">Work</a>
+								</li>
+								<li>
+									<a href="contact.html">Contact us</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div data-router-wrapper>
+		<div data-router-view="home">
+			<section class="section hero __home hide-on-scale" id="home-hero">
+				<div class="hero-gradient dynamic-gradient">
+					<div class="dynamic-gradient-item __1">
+						<img src="images/gradient/hero/hero-gradient-1.svg" alt="Floss creatives gradient" />
+					</div>
+					<div class="dynamic-gradient-item __2">
+						<img src="images/gradient/hero/hero-gradient-2.svg" alt="Floss creatives gradient" />
+					</div>
+					<div class="dynamic-gradient-item __3">
+						<img src="images/gradient/hero/hero-gradient-3.svg" alt="Floss creatives gradient" />
+					</div>
+					<div class="dynamic-gradient-item __4">
+						<img src="images/gradient/hero/hero-gradient-4.svg" alt="Floss creatives gradient" />
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-10 offset-xl-1">
+							<div class="hero-content">
+								<div class="hero-title">
+									<h1 class="h-1">
+										<span class="split-text">We are specialized</span>
+										<span class="hero-title-switcher">
+											<span class="split-text">in</span>
+											<span class="text-switcher-overlay">
+												<span class="text-switcher">
+													<span class="text-switcher-item">AR,VR,XR</span>
+													<span class="text-switcher-item">CGI Animation</span>
+													<span class="text-switcher-item">Experiential</span>
+													<span class="text-switcher-item">WebGL</span>
+												</span>
+											</span>
+										</span>
+									</h1>
+								</div>
+								<div class="hero-description split-text">
+								<p>To keep pace we must innovate, experiment, collaborate, inspire, and then share that knowledge.</p>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero-content-action scroll-to" data-scroll="#home-about">
+					<div class="follow-wrap">
+						<div class="link-circle follow-wrap-item">
+							<div class="link-circle-figure"></div>
+							<svg viewBox="0 0 8 35" class="link-circle-icon">
+								<path d="M3.49117 33.8813C3.68644 34.0766 4.00302 34.0766 4.19828 33.8813L7.38026 30.6993C7.57552 30.5041 7.57552 30.1875 7.38026 29.9922C7.185 29.797 6.86842 29.797 6.67315 29.9922L3.84473 32.8206L1.0163 29.9922C0.821039 29.797 0.504456 29.797 0.309194 29.9922C0.113932 30.1875 0.113932 30.5041 0.309194 30.6993L3.49117 33.8813ZM3.34473 0.752197L3.34473 33.5278L4.34473 33.5278L4.34473 0.752197L3.34473 0.752197Z" />
+							</svg>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section about __home hide-on-scale" id="home-about">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-9">
+							<div class="section-label">
+								<h6 class="h-6 split-text">About us</h6>
+							</div>
+							<div class="section-title">
+								<h2 class="h-2 split-text">We are digital consultancy specialised in technology, <strong>data visualisation</strong>, content <strong>creation and</strong> CGI <strong>and</strong> VFX.</h2>
+							</div>
+							<div class="section-description split-text">
+								<p>We work as an extension to your team, from ideation, platform selection to campaign strategy.</p>
+							</div>
+						</div>
+					</div>
+					<div class="about-banner __1 parallax-on-scroll" data-speed="-50">
+						<div class="about-banner-item">
+							<img
+								src="https://images.unsplash.com/photo-1538388149542-5e24932d11a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
+								class="scale-on-scroll"
+								alt="">
+						</div>
+					</div>
+					<div class="about-banner __2 parallax-on-scroll" data-speed="80">
+						<div class="about-banner-item">
+							<img
+								src="https://images.unsplash.com/photo-1605647540924-852290f6b0d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+								class="scale-on-scroll"
+								alt="">
+						</div>
+					</div>
+					<div class="about-banner __3">
+						<div class="about-banner-item">
+							<img
+								src="https://images.unsplash.com/photo-1593349480506-8433634cdcbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+								class="sticky-on-scroll"
+								alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section awards hide-on-scale">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-label">
+								<h6 class="h-6">Awards & Recognitions</h6>
+								<div class="icons __awards">
+									<div class="icons-item">
+										<img src="images/awards/awards-1.png" alt="Awards & Recognitions" />
+									</div>
+									<div class="icons-item">
+										<img src="images/awards/awards-2.png" alt="Awards & Recognitions" />
+									</div>
+									<div class="icons-item">
+										<img src="images/awards/awards-3.png" alt="Awards & Recognitions" />
+									</div>
+									<div class="icons-item">
+										<img src="images/awards/awards-4.png" alt="Awards & Recognitions" />
+									</div>
+									<div class="icons-item">
+										<img src="images/awards/awards-5.png" alt="Awards & Recognitions" />
+									</div>
+									<div class="icons-item">
+										<img src="images/awards/awards-6.png" alt="Awards & Recognitions" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section clients hide-on-scale">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-label">
+								<h6 class="h-6">Clients we worked with</h6>
+								<div class="icons __clients">
+									<div class="icons-item">
+										<img src="images/clients/clients-1.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-2.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-3.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-4.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-5.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-6.png" alt="Clients we worked with" />
+									</div>
+									<div class="icons-item">
+										<img src="images/clients/clients-7.png" alt="Clients we worked with" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section do">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="section-label hide-on-scale switch-opacity-on-hover">
+								<h6 class="h-6 split-text">What we do</h6>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="section-title hide-on-scale switch-opacity-on-hover">
+								<h2 class="h-2 split-text">Our Cases</h2>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="section-action hide-on-scale switch-opacity-on-hover">
+								<a href="work.html" class="btn">
+									<span class="btn-title">View all work</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="cases with-hover">
+						<div class="cases-box">
+							<div class="case switch-opacity-on-hover">
+								<a href="case.html" class="case-thumb hide-on-scale" data-transition="scale">
+									<img
+										src="https://images.unsplash.com/photo-1592929881470-65c6db486987?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+										class="case-thumb-image scale-on-scroll"
+										alt="Jaguar racing formula e 2021" />
+								</a>
+								<div class="case-content hide-on-scale">
+									<p class="case-content-title h-5">Jaguar racing formula e 2021</p>
+								</div>
+							</div>
+						</div>
+						<div class="cases-box">
+							<div class="case switch-opacity-on-hover">
+								<a href="case.html" class="case-thumb hide-on-scale" data-transition="scale">
+									<img
+										src="https://images.unsplash.com/photo-1592929881470-65c6db486987?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+										class="case-thumb-image scale-on-scroll"
+										alt="Jaguar racing formula e 2021" />
+								</a>
+								<div class="case-content hide-on-scale">
+									<p class="case-content-title h-5">Jaguar racing formula e 2021</p>
+								</div>
+							</div>
+						</div>
+						<div class="cases-box">
+							<div class="case switch-opacity-on-hover">
+								<a href="case.html" class="case-thumb hide-on-scale" data-transition="scale">
+									<img
+										src="https://images.unsplash.com/photo-1592929881470-65c6db486987?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+										class="case-thumb-image scale-on-scroll"
+										alt="Jaguar racing formula e 2021" />
+								</a>
+								<div class="case-content hide-on-scale">
+									<p class="case-content-title h-5">Jaguar racing formula e 2021</p>
+								</div>
+							</div>
+						</div>
+						<div class="cases-box">
+							<div class="case switch-opacity-on-hover">
+								<a href="case.html" class="case-thumb hide-on-scale" data-transition="scale">
+									<img
+										src="https://images.unsplash.com/photo-1592929881470-65c6db486987?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+										class="case-thumb-image scale-on-scroll"
+										alt="Jaguar racing formula e 2021" />
+								</a>
+								<div class="case-content hide-on-scale">
+									<p class="case-content-title h-5">Jaguar racing formula e 2021</p>
+								</div>
+							</div>
+						</div>
+						<div class="cases-box">
+							<div class="case switch-opacity-on-hover">
+								<a href="case.html" class="case-thumb hide-on-scale" data-transition="scale">
+									<img
+										src="https://images.unsplash.com/photo-1592929881470-65c6db486987?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1740&q=80"
+										class="case-thumb-image scale-on-scroll"
+										alt="Jaguar racing formula e 2021" />
+								</a>
+								<div class="case-content hide-on-scale">
+									<p class="case-content-title h-5">Jaguar racing formula e 2021</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-7">
+					<div class="footer-body">
+						<a href="index.html" class="footer-logo">
+							<img src="images/logo.svg" alt="Floss creatives" />
+						</a>
+						<div class="subscribe">
+							<p class="h-2">Subscribe</p>
+							<div class="subscribe-form">
+								<form>
+									<div class="input-container">
+										<input type="text" name="email" class="input" />
+										<label>Email</label>
+									</div>
+									<button class="btn full-width">
+										<span class="btn-title">Send</span>
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-5">
+					<div class="footer-nav">
+						<div class="footer-nav-item">
+							<p><span>Sitemap</span></p>
+							<ul>
+								<li>
+									<a href="about.html">About us</a>
+								</li>
+								<li>
+									<a href="work.html">View all work</a>
+								</li>
+								<li>
+									<a href="about.html">Our thinking</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav-item">
+							<p><span>Follow us</span></p>
+							<ul>
+								<li>
+									<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+								</li>
+								<li>
+									<a href="https://www.behance.net/" target="_blank">Behance</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/" target="_blank">Linkedin</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav-item">
+							<p><span>What we do</span></p>
+							<ul>
+								<li>
+									<a href="work.html">Animation</a>
+								</li>
+								<li>
+									<a href="work.html">CGI Imagery</a>
+								</li>
+								<li>
+									<a href="work.html">Digital</a>
+								</li>
+								<li>
+									<a href="work.html">Game Cinematics</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav-item">
+							<p><span>legal info</span></p>
+							<ul>
+								<li>
+									<a href="#">Privacy policy</a>
+								</li>
+								<li>
+									<a href="#">Cookie policy</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="copyright">
+						<p>&copy; 2021 Floss Creatives.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</main>
 
 </body>
 </html>

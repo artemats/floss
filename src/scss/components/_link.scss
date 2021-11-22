@@ -1,0 +1,72 @@
+.link{
+	font-size: 18px;
+	text-transform: capitalize;
+	transition: all var(--gradient-duration) var(--gradient-ease);
+		@include hover($hoverWidth){
+			&:hover{
+				background: linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+				background: -webkit-linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		&-circle{
+			position: absolute;
+			width: 112px;
+			height: 112px;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+			padding: 0;
+			color: var(--color-grey);
+			border: none;
+			//margin: -56px 0 0 -56px;
+				&-icon{
+					width: 8px;
+					height: 35px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					fill: none;
+						path{
+							fill: var(--color-white);
+						}
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 1px currentColor solid;
+					border-radius: 50%;
+					opacity: .4;
+				}
+				&-figure{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 96px;
+					height: 96px;
+					border: 1px currentColor solid;
+					opacity: .4;
+					transform: rotate(60deg);
+					margin: -48px 0 0 -48px;
+					will-change: transform;
+					animation: rotation 10s linear infinite;
+					animation-fill-mode: backwards;
+					animation-play-state: paused;
+				}
+		}
+}
+
+@keyframes rotation {
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}

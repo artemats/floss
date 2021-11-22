@@ -1,0 +1,56 @@
+.do{
+	padding: 118px 0 75px;
+	position: static;
+		.section{
+			&-action{
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				height: 100%;
+			}
+		}
+		.cases{
+			padding-top: 90px;
+				&-box{
+					width: 48%;
+						&:nth-child(2){
+							width: 52%;
+							margin-top: 90px;
+						}
+						&:nth-child(3){
+							margin-top: -60px;
+							width: 38%;
+								.case{
+									&-thumb{
+										width: 496px;
+										height: 496px;
+										border-radius: 50%;
+									}
+								}
+						}
+						&:nth-child(4){
+							margin-top: 163px;
+							width: 24%;
+								.case{
+									&-thumb{
+										height: 274px;
+									}
+									&-content{
+											&-title{
+												font-size: 19px;
+											}
+									}
+								}
+						}
+						&:nth-child(5){
+							margin-top: 110px;
+							width: 38%;
+								.case{
+									&-thumb{
+										height: 381px;
+									}
+								}
+						}
+				}
+		}
+}

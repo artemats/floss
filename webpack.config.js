@@ -57,6 +57,26 @@ module.exports = {
 			template: path.resolve(__dirname, './src/html/index.html'),
 			filename: 'index.html',
 		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, './src/html/case.html'),
+			filename: 'case.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, './src/html/about.html'),
+			filename: 'about.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, './src/html/work.html'),
+			filename: 'work.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, './src/html/contact.html'),
+			filename: 'contact.html',
+		}),
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, './src/html/page-not-found.html'),
+			filename: 'page-not-found.html',
+		}),
 		// new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new MiniCssExtractPlugin({

@@ -1,0 +1,31 @@
+.dynamic-gradient{
+		&-item{
+			position: absolute;
+			pointer-events: none;
+				&.__1 {
+					width: 1268px;
+					height: 1093px;
+					top: -150px;
+					left: -150px;
+				}
+				&.__2{
+					width: 1493px;
+					height: 1114px;
+					right: -400px;
+					top: -100px;
+				}
+				&.__3{
+					width: 1180px;
+					height: 944px;
+					z-index: 1;
+					left: 10%;
+					top: 10%;
+				}
+				&.__4{
+					width: 1223px;
+					height: 911px;
+					top: 0;
+					left: 15%;
+				}
+		}
+}

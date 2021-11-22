@@ -1,0 +1,9 @@
+.contact-form{
+	padding-top: 10px;
+		.tabs{
+			margin: 40px 0 42px;
+		}
+		label{
+			@extend .input-label;
+		}
+}

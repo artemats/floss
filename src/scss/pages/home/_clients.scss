@@ -1,0 +1,19 @@
+.clients{
+	padding: 20px 0;
+	position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 1358px;
+			height: 1418px;
+			left: 55%;
+			top: -300px;
+			transform: translateX(-50%);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			background-image: url(../images/gradient/clients-gradient.svg);
+			pointer-events: none;
+			opacity: .1;
+		}
+}
