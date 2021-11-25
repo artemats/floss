@@ -17,23 +17,6 @@ export const dynamicGradient = () => {
 
 			});
 		}
-	} else if(!!wraps && window.innerWidth < 991) {
-		window.addEventListener('deviceorientation', handleOrientation, true);
-
-		function handleOrientation(event) {
-			const x = event.beta * 5;
-			const y = event.gamma * 5;
-
-			for (let i = 0; i < wraps.length; i++) {
-				const item1 = wraps[i].querySelector('.dynamic-gradient-item.__1');
-				const item2 = wraps[i].querySelector('.dynamic-gradient-item.__2');
-				const item3 = wraps[i].querySelector('.dynamic-gradient-item.__3');
-				const item4 = wraps[i].querySelector('.dynamic-gradient-item.__4');
-
-				moveGradients(item1, item2, item3, item4, x, y);
-
-			}
-		}
 	}
 }
 
