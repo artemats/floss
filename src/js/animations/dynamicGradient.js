@@ -21,8 +21,8 @@ export const dynamicGradient = () => {
 		window.addEventListener('deviceorientation', handleOrientation, true);
 
 		function handleOrientation(event) {
-			const x = event.beta;
-			const y = event.gamma;
+			const x = event.beta * 10;
+			const y = event.gamma * 10;
 
 			for (let i = 0; i < wraps.length; i++) {
 				const item1 = wraps[i].querySelector('.dynamic-gradient-item.__1');
