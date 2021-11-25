@@ -48,5 +48,29 @@ export const dynamicGradient = () => {
 				});
 			});
 		}
+	} else if(!!wraps && window.innerWidth < 991) {
+		window.addEventListener('deviceorientation', handleOrientation, true);
+
+		function handleOrientation(event) {
+			const x = event.beta;
+			const y = event.gamma;
+
+			for (let i = 0; i < wraps.length; i++) {
+				const item1 = wraps[i].querySelector('.dynamic-gradient-item.__1');
+				const item2 = wraps[i].querySelector('.dynamic-gradient-item.__2');
+				const item3 = wraps[i].querySelector('.dynamic-gradient-item.__3');
+				const item4 = wraps[i].querySelector('.dynamic-gradient-item.__4');
+
+				Tween.to(item1, {
+					x: (x / 2),
+					y: (y / 4),
+					scale: Math.max(1, (x / 1300)),
+					rotate: Math.max(0, ((x - y) / 800)),
+					duration: transition.gradientMove.duration,
+					ease: transition.gradientMove.ease,
+				});
+
+			}
+		}
 	}
 }
