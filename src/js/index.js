@@ -75,8 +75,5 @@ function handleOrientation(event) {
 	let beta     = event.beta;
 	let gamma    = event.gamma;
 
-	alert(absolute);
-	alert(alpha);
-	alert(beta);
-	alert(gamma);
+	document.querySelector('.hero.__home .hero-description').innerHTML = `absolute - ${absolute}, alpha - ${alpha}, beta - ${beta}, gama - ${gamma}`;
 }
