@@ -3,6 +3,10 @@
 			max-width: 416px;
 			width: 100vw;
 			padding: 40px 0;
+				@include d($xs){
+					width: 100%;
+					max-width: 100%;
+				}
 		}
 		input{
 			@extend .input;

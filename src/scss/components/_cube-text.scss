@@ -33,10 +33,44 @@
 			height: 126px;
 			opacity: 0;
 			transform: translateY(50px);
+				@include d($xl){
+					height: 118px;
+				}
+				@include d($sxl){
+					height: 100px;
+				}
+				@include d($md){
+					height: 78px;
+				}
+				@include d($sm){
+					height: 66px;
+				}
+				@include d($xs){
+					height: 51px;
+				}
 		}
 		&.with-transition{
 			.text-switcher-item{
 				transition: opacity var(--cube-duration) var(--cube-ease);
 			}
+		}
+		@include d($xl){
+			height: 118px;
+		}
+		@include d($sxl){
+			width: 600px;
+			height: 100px;
+		}
+		@include d($md){
+			height: 78px;
+			width: 480px;
+		}
+		@include d($sm){
+			height: 66px;
+			width: 380px;
+		}
+		@include d($xs){
+			height: 51px;
+			width: 280px;
 		}
 }

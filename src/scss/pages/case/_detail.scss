@@ -15,6 +15,9 @@
 				.case-author{
 					&:not(:last-child){
 						margin-right: 110px;
+							@include d($sxl){
+								margin-right: 12vw;
+							}
 					}
 				}
 		}

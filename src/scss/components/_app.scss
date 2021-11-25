@@ -4,6 +4,9 @@ body{
 	font-family: var(--font-base);
 	font-size: 19px;
 	line-height: 1.4em;
+		@include d($xs){
+			font-size: 16px;
+		}
 }
 
 #wrapper{
@@ -15,18 +18,31 @@ body{
 		@include d($xlg){
 			max-width: 1342px;
 		}
+		@include d($lg){
+			max-width: 100%;
+			padding: 0 96px;
+		}
+		@include d($xl){
+			padding: 0 48px;
+		}
+		@include d($xs){
+			padding: 0 15px;
+		}
 }
 
 .section{
 	position: relative;
 		&-label{
-			& > *{
-				background: linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
-				background: -webkit-linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
 			margin-bottom: 30px;
+				& > *{
+					background: linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+					background: -webkit-linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+				@include d($xs){
+					margin-bottom: 20px;
+				}
 		}
 }
 
@@ -40,6 +56,14 @@ body{
 			justify-content: center;
 			height: 128px;
 			width: 128px;
+				@include d($sm){
+					width: 110px;
+					height: 110px;
+				}
+		}
+		@include d($md){
+			flex-wrap: wrap;
+			justify-content: flex-start;
 		}
 }
 
@@ -47,6 +71,9 @@ body{
 	font-size: 14px;
 	color: var(--color-grey);
 	margin-top: -24px;
+		@include d($sxl){
+			margin-top: 90px;
+		}
 }
 
 [data-router-wrapper]{

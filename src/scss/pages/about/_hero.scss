@@ -8,11 +8,17 @@
 				&-description{
 					max-width: 300px;
 					margin-left: 112px;
+						@include d($sm){
+							margin-left: 40px;
+						}
 				}
 		}
 		.container{
 			position: relative;
 			z-index: 1;
 			pointer-events: none;
+		}
+		@include d($xs){
+			padding: 176px 0;
 		}
 }

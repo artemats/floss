@@ -6,7 +6,7 @@ import AboutRenderer from "./renderers/about";
 import WorkRenderer from "./renderers/work";
 import CaseRenderer from "./renderers/case";
 import ContactRenderer from "./renderers/contact";
-import Scale from "./router-transitions/scale";
+import Scale, {switchHeader} from "./router-transitions/scale";
 import {inputFocus} from "./common/inputFocus";
 import {mouseFollow} from "./common/mouseFollow";
 import {switchOpacityOnHover} from "./animations/switchOpacityOnHover";
@@ -18,6 +18,7 @@ import {footerParallaxOnScroll} from "./animations/footerParallaxOnScroll";
 import {splittingText} from "./common/sliceText";
 import {showTitleRowsOnScroll} from "./animations/showTitleRowsOnScroll";
 import {showCubeText} from "./common/showCubeText";
+import {closeNav, toggleNav} from "./common/toggleNav";
 
 const H = new Highway.Core({
 	renderers: {
@@ -34,11 +35,6 @@ const H = new Highway.Core({
 		}
 	}
 });
-
-// inputFocus();
-// switchOpacityOnHover();
-// scrollTo();
-// imageScaleOnScroll();
 
 H.on('NAVIGATE_IN', () => {
 	splittingText();
@@ -60,4 +56,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	footerParallaxOnScroll();
 	showTitleRowsOnScroll();
 	showCubeText();
+	switchHeader(true);
+	toggleNav();
 });
+
+window.addEventListener('scroll', () => {
+	closeNav();
+});
+
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+isSafari ? document.body.classList.add('is-safari') : null;

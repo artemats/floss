@@ -14,9 +14,25 @@
 				&:nth-child(4n + 4),
 				&:nth-child(4n + 5){
 					width: 45%;
+						@include d($sm){
+							width: 100%;
+						}
 				}
 				&:nth-child(even){
 					margin-top: -40px;
+						@include d($sm){
+							margin-top: 0;
+						}
+				}
+				@include d($lg){
+					padding: 0 45px 45px;
+				}
+				@include d($sxl){
+					padding: 0 12px 24px;
+				}
+				@include d($sm){
+					width: 100%;
+					padding: 0 0 24px;
 				}
 		}
 		&-all{
@@ -26,6 +42,12 @@
 					&-box{
 						&:not(:last-child):not(:nth-last-child(2)){
 							margin-bottom: 70px;
+								@include d($sm){
+									margin-bottom: 40px;
+								}
+						}
+						@include d($sm){
+							margin-bottom: 40px;
 						}
 					}
 				}
@@ -42,11 +64,22 @@
 					background-image: url(../images/gradient/clients-gradient.svg);
 					pointer-events: none;
 					opacity: .1;
+						@include d($sm){
+							display: none;
+						}
+				}
+				@include d($xs){
+					padding: 176px 0 50px;
 				}
 		}
 		&-action{
 			text-align: center;
 			padding: 25px 0;
+				.btn{
+					@include d($xs){
+						width: 100%;
+					}
+				}
 		}
 		&.with-hover{
 			.case{
@@ -54,6 +87,10 @@
 						opacity: 0;
 						transform: translateY(20px);
 						transition: opacity .5s ease-out, transform .5s ease-out;
+							@include d($md){
+								opacity: 1;
+								transform: translateY(0);
+							}
 					}
 					&:hover{
 							.case-content{
@@ -63,5 +100,18 @@
 							}
 					}
 			}
+		}
+		@include d($lg){
+			margin: 0 -96px;
+		}
+		@include d($xl){
+			margin: 0 -48px;
+		}
+		@include d($sxl){
+			margin: 0 -12px;
+		}
+		@include d($sm){
+			margin: 0;
+			padding-top: 40px;
 		}
 }

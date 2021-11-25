@@ -7,12 +7,20 @@
 					height: 1093px;
 					top: -150px;
 					left: -150px;
+						@include d($md){
+							width: 165vw;
+							height: 142vw;
+						}
 				}
 				&.__2{
 					width: 1493px;
 					height: 1114px;
 					right: -400px;
 					top: -100px;
+						@include d($md){
+							width: 194vw;
+							height: 145vw;
+						}
 				}
 				&.__3{
 					width: 1180px;
@@ -20,12 +28,20 @@
 					z-index: 1;
 					left: 10%;
 					top: 10%;
+						@include d($md){
+							width: 153vw;
+							height: 123vw;
+						}
 				}
 				&.__4{
 					width: 1223px;
 					height: 911px;
 					top: 0;
 					left: 15%;
+						@include d($md){
+							width: 159vw;
+							height: 118vw;
+						}
 				}
 		}
 }

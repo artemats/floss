@@ -8,6 +8,7 @@
 	border: none;
 	position: relative;
 	background-color: transparent;
+	text-align: center;
 		&:before,
 		&:after{
 			content: '';
@@ -52,4 +53,21 @@
 				}
 			}
 		}
+		@include d($xs){
+			font-size: 14px;
+			height: 48px;
+			line-height: 46px;
+			cursor: default;
+		}
+}
+
+.is-safari{
+	.btn{
+		&:before{
+			border-color: var(--color-gradient-1);
+		}
+		&:after{
+			border-color: var(--color-gradient-3);
+		}
+	}
 }

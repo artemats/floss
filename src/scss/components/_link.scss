@@ -60,6 +60,10 @@
 					animation-play-state: paused;
 				}
 		}
+		@include d($xs){
+			font-size: 14px;
+			cursor: default;
+		}
 }
 
 @keyframes rotation {

@@ -19,6 +19,10 @@
 			left: 0;
 			top: 12px;
 			pointer-events: none;
+				@include d($xs){
+					font-size: 14px;
+					top: 14px;
+				}
 		}
 		&.is-focus{
 				& ~ .label,
@@ -27,6 +31,9 @@
 					color: var(--color-grey-200);
 					top: -10px;
 				}
+		}
+		@include d($xs){
+			font-size: 14px;
 		}
 }
 

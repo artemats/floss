@@ -4,6 +4,7 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import {transition} from "../constants/transitions";
 
 gsap.registerPlugin(ScrollToPlugin);
+let inTrigger;
 
 class Scale extends Highway.Transition {
 	out({ from, trigger, done }) {
@@ -13,6 +14,7 @@ class Scale extends Highway.Transition {
 		hideContent();
 
 		const { x } = trigger.getBoundingClientRect();
+		inTrigger = trigger;
 
 		Tween.to(window, {
 			duration: transition.scale.duration,
@@ -26,27 +28,33 @@ class Scale extends Highway.Transition {
 
 		Tween.to(trigger, {
 			width: window.innerWidth,
-			height: window.innerHeight,
+			// height: window.innerHeight,
+			height: window.innerHeight * 2,
 			top: -trigger.offsetTop,
 			left: -x,
 			zIndex: 9,
-			paddingTop: 282,
+			paddingTop: window.innerWidth > 991 ? 282 : 100,
 			borderRadius: 0,
 			duration: transition.scale.duration,
 			ease: transition.scale.ease,
 			onComplete: () => {
 				done();
-				Tween.to(trigger, {
-					paddingTop: 362,
-					duration: transition.scale.duration,
-					ease: transition.scale.ease,
-				});
 				switchHeader(true);
 			},
 		});
 
 	}
 	in({ from, to, done }) {
+
+		// to low down banner //
+		let titleMarginBottom = window.innerWidth > 991 ? 80 : 40;
+		let wrapPaddingTop = window.innerWidth > 991 ? 205 : 176;
+		let titleHeight = to.querySelector('.hero-title').getBoundingClientRect().height + titleMarginBottom + wrapPaddingTop;
+		Tween.to(inTrigger, {
+			paddingTop: titleHeight,
+			duration: transition.scale.duration,
+			ease: transition.scale.ease,
+		});
 
 		preHide();
 		showContent();
@@ -81,10 +89,6 @@ export default Scale;
 const hideContent = () => {
 	const elements = document.querySelectorAll('.hide-on-scale');
 	for(let i = 0; i < elements.length; i++) {
-		// Tween.set(elements[i],{
-		// 	opacity: 0,
-		// 	duration: 0,
-		// });
 		elements[i].style.opacity = '0';
 	}
 }
@@ -114,7 +118,7 @@ const showContent = () => {
 	}
 }
 
-const switchHeader = (status) => {
+export const switchHeader = (status) => {
 	const header = document.querySelector('.header');
 	Tween.to(header, {
 		top: status ? 0 : -180,

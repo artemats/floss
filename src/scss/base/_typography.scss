@@ -3,18 +3,57 @@ h1{
 	font-family: var(--font-base);
 	letter-spacing: -.01em;
 	line-height: 1.06em;
+		@include d($xl){
+			font-size: 112px;
+		}
+		@include d($sxl){
+			font-size: 94px;
+		}
+		@include d($md){
+			font-size: 74px;
+		}
+		@include d($sm){
+			font-size: 62px;
+		}
+		@include d($xs){
+			font-size: 46px;
+		}
 }
 
 h2{
 	font-size: 70px;
 	line-height: 1.1em;
 	font-family: var(--font-base);
+		@include d($xl){
+			font-size: 62px;
+		}
+		@include d($sxl){
+			font-size: 52px;
+		}
+		@include d($md){
+			font-size: 48px;
+		}
+		@include d($sm){
+			font-size: 40px;
+		}
+		@include d($xs){
+			font-size: 35px;
+		}
 }
 
 h3{
 	font-size: 40px;
 	line-height: 1.4em;
 	font-family: var(--font-base);
+		@include d($xl){
+			font-size: 38px;
+		}
+		@include d($sxl){
+			font-size: 34px;
+		}
+		@include d($xs){
+			font-size: 23px;
+		}
 }
 
 h4{
@@ -26,6 +65,15 @@ h5{
 	font-size: 28px;
 	letter-spacing: .01em;
 	line-height: 1.286em;
+		@include d($sxl){
+			font-size: 24px;
+		}
+		@include d($md){
+			font-size: 22px;
+		}
+		@include d($xs){
+			font-size: 16px;
+		}
 }
 
 h6{
@@ -34,6 +82,9 @@ h6{
 	letter-spacing: .05em;
 	line-height: 1.3em;
 	text-transform: uppercase;
+		@include d($xs){
+			font-size: 14px;
+		}
 }
 
 h1, h2, h3, h4, h5, h6, p{

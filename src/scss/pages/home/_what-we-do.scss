@@ -7,6 +7,10 @@
 				justify-content: flex-end;
 				align-items: center;
 				height: 100%;
+					@include d($sm){
+						justify-content: center;
+						margin-top: 40px;
+					}
 			}
 		}
 		.cases{
@@ -16,6 +20,13 @@
 						&:nth-child(2){
 							width: 52%;
 							margin-top: 90px;
+								@include d($lg){
+									width: 55%;
+								}
+								@include d($sm){
+									width: 100%;
+									margin-top: 0;
+								}
 						}
 						&:nth-child(3){
 							margin-top: -60px;
@@ -25,7 +36,25 @@
 										width: 496px;
 										height: 496px;
 										border-radius: 50%;
+											@include d($xl){
+												width: 420px;
+												height: 420px;
+											}
+											@include d($sxl){
+												width: 48vw;
+												height: 48vw;
+											}
+											@include d($sm){
+												width: 40vw;
+												height: 40vw;
+											}
 									}
+								}
+								@include d($sxl){
+									width: 55%;
+								}
+								@include d($md){
+									margin-top: 0;
 								}
 						}
 						&:nth-child(4){
@@ -34,12 +63,24 @@
 								.case{
 									&-thumb{
 										height: 274px;
+											@include d($xl){
+												height: 230px;
+											}
+											@include d($sxl){
+												height: 30vw;
+											}
 									}
 									&-content{
 											&-title{
 												font-size: 19px;
 											}
 									}
+								}
+								@include d($sxl){
+									width: 45%;
+								}
+								@include d($sm){
+									margin-top: 30px;
 								}
 						}
 						&:nth-child(5){
@@ -48,9 +89,29 @@
 								.case{
 									&-thumb{
 										height: 381px;
+											@include d($sxl){
+												height: 50vw;
+											}
 									}
 								}
+								@include d($sxl){
+									width: 100%;
+									margin-top: 50px;
+								}
+								@include d($sm){
+									margin-top: 0;
+								}
+						}
+						@include d($sm){
+							width: 100%;
+							margin-bottom: 40px;
 						}
 				}
+				@include d($sm){
+					padding-top: 40px;
+				}
+		}
+		@include d($sm){
+			padding: 100px 0;
 		}
 }

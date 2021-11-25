@@ -7,8 +7,20 @@
 						&-box{
 							&:nth-child(even){
 								margin-top: -90px;
+									@include d($sm){
+										margin-top: 0;
+									}
+							}
+							@include d($sm){
+								margin-bottom: 40px;
 							}
 						}
+						@include d($sm){
+							padding-top: 40px;
+						}
+				}
+				@include d($xs){
+					padding: 100px 0 50px;
 				}
 		}
 }

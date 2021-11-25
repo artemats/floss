@@ -24,10 +24,17 @@
 					margin-bottom: 88px;
 						&:nth-child(odd){
 							width: 63%;
+								@include d($xs){
+									width: 55%;
+								}
 						}
 						&:last-child,
 						&:nth-last-child(2){
 							margin-bottom: 0;
+						}
+						@include d($xs){
+							width: 45%;
+							margin-bottom: 40px;
 						}
 				}
 				p{
@@ -40,6 +47,9 @@
 				li{
 					&:not(:last-child){
 						padding-bottom: 10px;
+							@include d($xs){
+								padding-bottom: 5px;
+							}
 					}
 				}
 		}
@@ -47,10 +57,25 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
+				.footer-logo{
+					@include d($sxl){
+						display: none;
+					}
+				}
+				@include d($sm){
+					align-items: stretch;
+				}
 		}
 		&-logo{
 			order: 2;
 			width: 160px;
+				@include d($sxl){
+					margin-top: 70px;
+				}
+				@include d($xs){
+					width: 130px;
+					margin-top: 80px;
+				}
 		}
 		.subscribe{
 			order: 1;
@@ -58,5 +83,11 @@
 		}
 		.container{
 			position: relative;
+		}
+		@include d($sxl){
+			padding: 80px 0;
+		}
+		@include d($xs){
+			padding: 70px 0 20px;
 		}
 }

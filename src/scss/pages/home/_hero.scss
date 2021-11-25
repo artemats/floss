@@ -6,6 +6,12 @@
 					max-width: 296px;
 					margin-left: 112px;
 					padding-top: 23px;
+						@include d($md){
+							margin-left: 120px;
+						}
+						@include d($sm){
+							margin-left: 40px;
+						}
 				}
 		}
 		// For dynamic gradient //
@@ -13,5 +19,8 @@
 			position: relative;
 			pointer-events: none;
 			z-index: 1;
+		}
+		@include d($xs){
+			padding: 176px 0;
 		}
 }

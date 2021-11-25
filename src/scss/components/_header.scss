@@ -1,27 +1,76 @@
 .header{
 	position: absolute;
-	top: 0;
+	top: -180px;
 	left: 0;
 	width: 100%;
 	padding-top: 40px;
 	z-index: 3;
 		&-logo{
 			display: inline-block;
+			position: relative;
+			z-index: 1;
 		}
 		&-nav{
 			padding: 12px 0;
-			ul{
-				display: flex;
-				align-items: center;
-				justify-content: flex-end;
-			}
-			li{
-				&:not(:last-child){
-					margin-right: 65px;
+				ul{
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					position: relative;
+					z-index: 1;
+						@include d($sm){
+							height: 100%;
+							flex-direction: column;
+							justify-content: center;
+						}
 				}
-			}
-			a{
-				@extend .link;
-			}
+				li{
+					&:not(:last-child){
+						margin-right: 65px;
+							@include d($md){
+								margin-right: 40px;
+							}
+							@include d($sm){
+								margin-right: 0;
+							}
+					}
+					@include d($sm){
+						padding: 30px 0;
+					}
+				}
+				a{
+					@extend .link;
+				}
+				nav{
+					@include d($sm){
+						width: 100%;
+						height: 100%;
+						min-height: 500px;
+							a{
+								font-size: 48px;
+							}
+					}
+				}
+				.hero-gradient{
+					@include m($sm + 1){
+						display: none;
+					}
+				}
+				@include d($sm){
+					display: none;
+					opacity: 0;
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: var(--color-black);
+					overflow-y: auto;
+					overflow-x: hidden;
+				}
+				@include m($sm + 1){
+					display: block !important;
+					opacity: 1 !important;
+				}
 		}
 }

@@ -5,8 +5,7 @@ export const togglePlayingVideo = () => {
 
 	for(let i = 0; i < videoBoxes.length; i++) {
 
-		const videoId = videoBoxes[i].querySelector('video').getAttribute('id');
-		const player = new Plyr(`#${videoId}`, {
+		const player = new Plyr(`#payer`, {
 			controls: [],
 		});
 

@@ -7,6 +7,15 @@
 					.plyr--video{
 						opacity: 1 !important;
 					}
+					.video{
+						&-btn{
+							&:before{
+								width: 28px;
+								height: 28px;
+								background-image: url(../images/pause.svg);
+							}
+						}
+					}
 				}
 		}
 		&-mask{

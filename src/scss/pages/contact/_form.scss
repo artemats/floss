@@ -2,8 +2,20 @@
 	padding-top: 10px;
 		.tabs{
 			margin: 40px 0 42px;
+				&-item{
+					@include d($sm){
+						flex: 1;
+					}
+				}
+				@include d($sm){
+					display: flex;
+					width: 100%;
+				}
 		}
 		label{
 			@extend .input-label;
+		}
+		@include d($sxl){
+			margin-top: 50px;
 		}
 }
