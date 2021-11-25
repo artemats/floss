@@ -5,25 +5,28 @@ import {transition} from "../constants/transitions";
 export const footerParallaxOnScroll = () => {
 	const footer = document.querySelector('.footer');
 
-	Tween.set(footer, {
-		yPercent: -50
-	});
+	if(!!footer && window.innerWidth > 991) {
 
-	const uncover = Tween.timeline({
-		paused:true
-	});
+		Tween.set(footer, {
+			yPercent: -50
+		});
 
-	uncover.to(footer, {
-		yPercent: 0,
-		ease: transition.mouseMoving.ease,
-	});
+		const uncover = Tween.timeline({
+			paused: true
+		});
 
-	ScrollTrigger.create({
-		trigger: '[data-router-wrapper]',
-		start: 'bottom bottom',
-		end: '+=75%',
-		animation: uncover,
-		scrub: true,
-	})
+		uncover.to(footer, {
+			yPercent: 0,
+			ease: transition.mouseMoving.ease,
+		});
+
+		ScrollTrigger.create({
+			trigger: '[data-router-wrapper]',
+			start: 'bottom bottom',
+			end: '+=75%',
+			animation: uncover,
+			scrub: true,
+		});
+	}
 
 }
