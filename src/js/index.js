@@ -64,5 +64,19 @@ window.addEventListener('scroll', () => {
 	closeNav();
 });
 
+window.addEventListener("deviceorientation", handleOrientation, true);
+
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 isSafari ? document.body.classList.add('is-safari') : null;
+
+function handleOrientation(event) {
+	let absolute = event.absolute;
+	let alpha    = event.alpha;
+	let beta     = event.beta;
+	let gamma    = event.gamma;
+
+	alert(absolute);
+	alert(alpha);
+	alert(beta);
+	alert(gamma);
+}
