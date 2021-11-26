@@ -56,26 +56,68 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/index.html'),
 			filename: 'index.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/case.html'),
 			filename: 'case.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/about.html'),
 			filename: 'about.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/work.html'),
 			filename: 'work.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/contact.html'),
 			filename: 'contact.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		new HtmlWebpackPlugin({
 			template: path.resolve(__dirname, './src/html/page-not-found.html'),
 			filename: 'page-not-found.html',
+			minify: {
+				collapseWhitespace: false,
+				removeComments: true,
+				removeRedundantAttributes: true,
+				removeScriptTypeAttributes: true,
+				removeStyleLinkTypeAttributes: true
+			},
 		}),
 		// new CleanWebpackPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
