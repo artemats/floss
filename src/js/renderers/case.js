@@ -3,11 +3,12 @@ import {imageScaleOnScroll} from "../animations/imageScaleOnScroll";
 import {footerParallaxOnScroll} from "../animations/footerParallaxOnScroll";
 import {mouseFollow} from "../common/mouseFollow";
 import {togglePlayingVideo} from "../common/togglePlayingVideo";
+import {loadVimeoPlayer} from "../common/loadVimeoPlayer";
 
 class CaseRenderer extends Highway.Renderer {
 	onEnter() {
 		mouseFollow();
-		togglePlayingVideo();
+		loadVimeoPlayer() ? togglePlayingVideo() : null;
 	}
 	onEnterCompleted() {
 		imageScaleOnScroll();
