@@ -7,6 +7,7 @@ import {stickyOnScroll} from "../animations/stickyOnScroll";
 import {imageScaleOnScroll} from "../animations/imageScaleOnScroll";
 import {footerParallaxOnScroll} from "../animations/footerParallaxOnScroll";
 import {mouseFollow} from "../common/mouseFollow";
+import {loadImages} from "../common/loadImages";
 
 class HomeRenderer extends Highway.Renderer {
 	onEnter() {
@@ -22,6 +23,7 @@ class HomeRenderer extends Highway.Renderer {
 		stickyOnScroll();
 		imageScaleOnScroll();
 		footerParallaxOnScroll();
+		loadImages();
 	}
 }
 
