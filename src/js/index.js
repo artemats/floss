@@ -19,6 +19,7 @@ import {splittingText} from "./common/sliceText";
 import {showTitleRowsOnScroll} from "./animations/showTitleRowsOnScroll";
 import {showCubeText} from "./common/showCubeText";
 import {closeNav, toggleNav} from "./common/toggleNav";
+import {initValidation} from "./common/validation";
 
 const H = new Highway.Core({
 	renderers: {
@@ -42,6 +43,7 @@ H.on('NAVIGATE_IN', () => {
 	scrollTo();
 	showTitleRowsOnScroll();
 	showCubeText();
+	initValidation();
 });
 
 document.addEventListener('DOMContentLoaded', function(event) {
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	showCubeText();
 	switchHeader(true);
 	toggleNav();
+	initValidation();
 });
 
 window.addEventListener('scroll', () => {

@@ -352,10 +352,11 @@
 						<div class="subscribe">
 							<p class="h-2">Subscribe</p>
 							<div class="subscribe-form">
-								<form>
+								<form id="subscribe-form">
 									<div class="input-container">
-										<input type="text" name="email" class="input" />
+										<input type="email" name="email" class="input" required />
 										<label>Email</label>
+										<div class="input-container-message">You missed the field</div>
 									</div>
 									<button class="btn full-width">
 										<span class="btn-title">Send</span>
@@ -452,6 +453,36 @@
 		</div>
 	</div>
 </main>
+
+
+<!--Submit form event-->
+<script>
+	// const form = document.querySelector('#subscribe-form');
+	// form.addEventListener('submit', (e) => {
+	// 	e.preventDefault();
+	// 	openModalThank();
+	// });
+</script>
+
+<!--Toggle thank modal-->
+<script>
+	const closeElements = document.querySelectorAll('.modal-close');
+	const modal = document.querySelector('#thank');
+	for(let i = 0; i < closeElements.length; i++) {
+		closeElements[i].addEventListener('click', () => {
+			closeModalThank();
+		});
+	}
+
+	const openModalThank = () => {
+		modal.style.display = 'block';
+		setTimeout(() => { modal.classList.add('is-visible') }, 500);
+	}
+	const closeModalThank = () => {
+		modal.classList.remove('is-visible');
+		setTimeout(() => { modal.style.display = 'none' }, 500);
+	}
+</script>
 
 </body>
 </html>

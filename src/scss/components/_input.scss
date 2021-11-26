@@ -8,9 +8,30 @@
 	font-family: var(--font-base);
 	height: 56px;
 	padding: 0;
+	transition: border-color var(--opacity-duration) var(--opacity-ease);
 		&-container{
 			position: relative;
 			padding-bottom: 30px;
+				&-message{
+					position: absolute;
+					bottom: 5px;
+					left: 0;
+					font-size: 14px;
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity var(--opacity-duration) var(--opacity-ease);
+				}
+				&.has-error{
+						.input{
+							border-color: var(--color-error);
+								&-container{
+										&-message{
+											color: var(--color-error);
+											opacity: 1;
+										}
+								}
+						}
+				}
 		}
 		&-label{
 			display: inline-block;
