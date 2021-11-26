@@ -6,6 +6,7 @@ import AboutRenderer from "./renderers/about";
 import WorkRenderer from "./renderers/work";
 import CaseRenderer from "./renderers/case";
 import ContactRenderer from "./renderers/contact";
+import PageNotFoundRenderer from "./renderers/404";
 import Scale, {switchHeader} from "./router-transitions/scale";
 import {inputFocus} from "./common/inputFocus";
 import {mouseFollow} from "./common/mouseFollow";
@@ -28,6 +29,7 @@ const H = new Highway.Core({
 		work: WorkRenderer,
 		case: CaseRenderer,
 		contact: ContactRenderer,
+		pageNotFound: PageNotFoundRenderer,
 	},
 	transitions: {
 		default: Fade,

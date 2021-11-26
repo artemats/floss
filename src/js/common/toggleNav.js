@@ -4,13 +4,15 @@ import {transition} from "../constants/transitions";
 export const toggleNav = () => {
 	const burger = document.querySelector('.burger');
 	const navLi = document.querySelectorAll('.header-nav li');
-	burger.addEventListener('click', () => {
-		burger.classList.contains('is-active') ? closeNav() : openNav();
-	});
-	for(let i = 0; i < navLi.length; i++) {
-		navLi[i].addEventListener('click', () => {
-			closeNav();
+	if(!!burger) {
+		burger.addEventListener('click', () => {
+			burger.classList.contains('is-active') ? closeNav() : openNav();
 		});
+		for (let i = 0; i < navLi.length; i++) {
+			navLi[i].addEventListener('click', () => {
+				closeNav();
+			});
+		}
 	}
 }
 

@@ -1,4 +1,4 @@
-import Tween, { Power2 } from 'gsap';
+import Tween  from 'gsap';
 import {transition} from "../constants/transitions";
 
 export const dynamicGradient = () => {
