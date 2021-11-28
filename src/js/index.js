@@ -63,21 +63,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	switchHeader(true);
 	toggleNav();
 	initValidation();
-
-	/*
-
-	 */
-// 	const head = document.getElementsByTagName('head')[0];
-// 	const script = document.createElement('script');
-// 	script.type = 'text/javascript';
-// 	script.innerHTML = `(function(w,d,u){
-// \t\t\tvar s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
-// \t\t\tvar h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
-// \t\t})(window,document,'https://cdn.bitrix24.ru/b8838131/crm/site_button/loader_1_0kaf0q.js');`;
-// 	head.appendChild(script);
-	/*
-
-	 */
 });
 
 window.addEventListener('scroll', () => {
