@@ -19,6 +19,8 @@
 		&-nav{
 			display: flex;
 			flex-wrap: wrap;
+			position: relative;
+			z-index: 1;
 				&-item{
 					width: 37%;
 					margin-bottom: 88px;

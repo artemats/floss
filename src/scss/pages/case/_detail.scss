@@ -12,7 +12,9 @@
 			display: flex;
 			align-items: center;
 			padding-top: 70px;
+			flex-wrap: wrap;
 				.case-author{
+					margin-bottom: 20px;
 					&:not(:last-child){
 						margin-right: 110px;
 							@include d($sxl){
