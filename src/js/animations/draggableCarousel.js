@@ -9,6 +9,8 @@ export const draggableCarousel = () => {
 		pagination: false,
 		arrows: false,
 		autoWidth: true,
+		speed: 1000,
+		easing: 'ease',
 	} );
 
 	splide.mount();
