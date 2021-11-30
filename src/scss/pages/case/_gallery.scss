@@ -1,0 +1,68 @@
+.gallery{
+	padding: 200px 0 100px;
+		&-list{
+			position: relative;
+			white-space: nowrap;
+		}
+		&-item{
+			position: relative;
+			height: 612px;
+			width: 530px;
+			margin: 0 24px;
+			pointer-events: none;
+			display: inline-block;
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					user-select: none;
+				}
+				@include d($lg){
+					height: 55vw;
+					width: 70vw;
+				}
+				@include d($sm){
+					margin: 0 12px;
+				}
+		}
+		&-flow{
+			position: absolute;
+			top: 90px;
+			left: 0;
+			width: 180px;
+			height: 180px;
+			background-color: var(--color-white);
+			border-radius: 50%;
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity var(--opacity-duration) var(--opacity-ease);
+				&-title{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%,-50%);
+					white-space: nowrap;
+					background: linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+					background: -webkit-linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
+		}
+		@include hover($hoverWidth){
+			&:hover{
+				.gallery-flow{
+					opacity: 1;
+				}
+			}
+		}
+		@include d($lg){
+			padding: 100px 0 80px;
+		}
+		@include d($md){
+			padding: 100px 0 50px;
+		}
+		@include d($sm){
+			padding: 100px 0 20px;
+		}
+}
