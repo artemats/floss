@@ -6,9 +6,9 @@ export const switchEmails = () => {
 	for(let i = 0; i < tabs.length; i++) {
 		tabs[i].addEventListener('click', (tab) => {
 			let { tabEmail, url } = tab.target.dataset;
-			let currentSrc = mapIframe.getAttribute('src');
+			let currentSrc = !!mapIframe ? mapIframe.getAttribute('src') : '';
 			!!tabEmail ? form.setAttribute('data-email', tabEmail) : null;
-			!!url && currentSrc !== url ? mapIframe.setAttribute('src', url) : null;
+			!!url && currentSrc && !!mapIframe !== url ? mapIframe.setAttribute('src', url) : null;
 			clearButtons(tabs);
 			tab.target.classList.add('active');
 		});

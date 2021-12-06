@@ -7,8 +7,8 @@ export const initValidation = () => {
 	/*
 	remove after check
 	 */
-	const closeElements = document.querySelectorAll('.modal-close');
-	const modal = document.querySelector('#thank');
+	// const closeElements = document.querySelectorAll('.modal-close');
+	// const modal = document.querySelector('#thank');
 
 	if(!!subscribeForm) {
 
@@ -24,10 +24,10 @@ export const initValidation = () => {
 			/*
 			remove after check
 			 */
-			else {
-				e.preventDefault();
-				openModalThank();
-			}
+			// else {
+			// 	e.preventDefault();
+			// 	openModalThank();
+			// }
 		});
 	}
 
@@ -45,10 +45,10 @@ export const initValidation = () => {
 			/*
 			remove after check
 			 */
-			else {
-				e.preventDefault();
-				openModalThank();
-			}
+			// else {
+			// 	e.preventDefault();
+			// 	openModalThank();
+			// }
 		});
 	}
 
@@ -57,11 +57,11 @@ export const initValidation = () => {
 /*
 remove after check
  */
-const openModalThank = () => {
-	modal.style.display = 'block';
-	setTimeout(() => { modal.classList.add('is-visible') }, 500);
-}
-const closeModalThank = () => {
-	modal.classList.remove('is-visible');
-	setTimeout(() => { modal.style.display = 'none' }, 500);
-}
+// const openModalThank = () => {
+// 	modal.style.display = 'block';
+// 	setTimeout(() => { modal.classList.add('is-visible') }, 500);
+// }
+// const closeModalThank = () => {
+// 	modal.classList.remove('is-visible');
+// 	setTimeout(() => { modal.style.display = 'none' }, 500);
+// }

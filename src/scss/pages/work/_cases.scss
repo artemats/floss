@@ -68,6 +68,22 @@
 							display: none;
 						}
 				}
+				.case{
+					@include hover($hoverWidth){
+						&:hover{
+							.case{
+								&-content-title{
+									transform: translateY(-10px);
+								}
+								&-thumb{
+									&-image{
+										opacity: .7;
+									}
+								}
+							}
+						}
+					}
+				}
 				@include d($xs){
 					padding: 176px 0 50px;
 				}

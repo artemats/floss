@@ -24,6 +24,7 @@ class Scale extends Highway.Transition {
 
 		Tween.set(trigger.querySelector('img'), {
 			scale: 1,
+			opacity: 1,
 		});
 
 		Tween.to(trigger, {

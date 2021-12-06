@@ -1,4 +1,5 @@
 .case{
+	transition: opacity var(--opacity-duration) var(--opacity-ease);
 	&-thumb{
 		height: 500px;
 		overflow: hidden;
@@ -11,6 +12,7 @@
 				@include imageCover(center top);
 				max-width: 1826px;
 				max-height: 756px;
+				transition: opacity var(--opacity-duration) var(--opacity-ease);
 					@include d($xlg){
 						max-width: 1472px;
 						max-height: 656px;
@@ -45,7 +47,7 @@
 	&-content{
 		padding-top: 20px;
 			&-title{
-
+				transition: transform var(--opacity-duration) var(--opacity-ease);
 			}
 	}
 	&-author{
@@ -73,5 +75,8 @@
 						background: linear-gradient(270deg, #98C1ED 0%, #CAAAD2 28.35%, #B996C8 52.1%, #BACBE7 100%);
 					}
 			}
+	}
+	&.hidden{
+		opacity: 0;
 	}
 }
