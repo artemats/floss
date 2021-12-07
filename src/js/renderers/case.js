@@ -10,7 +10,9 @@ import {draggableCarousel} from "../animations/draggableCarousel";
 class CaseRenderer extends Highway.Renderer {
 	onEnter() {
 		mouseFollow();
-		loadVimeoPlayer() ? togglePlayingVideo() : null;
+		setTimeout(() => {
+			loadVimeoPlayer() ? togglePlayingVideo() : null;
+		}, 1000);
 	}
 	onEnterCompleted() {
 		imageScaleOnScroll();
