@@ -11,8 +11,8 @@ export const draggableCarousel = () => {
 			pagination: false,
 			arrows: false,
 			autoWidth: true,
-			speed: 1000,
-			easing: 'ease',
+			speed: 5000,
+			easing: 'linear',
 		});
 
 		splide.mount();

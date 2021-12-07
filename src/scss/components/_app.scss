@@ -136,3 +136,10 @@ body{
 	transform: translateY(50px);
 	display: inline-block;
 }
+
+/*
+Hide global scrollbar
+ */
+::-webkit-scrollbar {
+	display: none;
+}

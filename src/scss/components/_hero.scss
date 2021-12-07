@@ -74,7 +74,7 @@
 						}
 				}
 				img{
-					@include imageCover(center top);
+					@include imageCover(center);
 				}
 				@include d($xlg){
 					height: 656px;

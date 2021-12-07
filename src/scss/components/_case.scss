@@ -9,7 +9,7 @@
 		align-items: center;
 		justify-content: flex-start;
 			img{
-				@include imageCover(center top);
+				@include imageCover(center);
 				max-width: 1826px;
 				max-height: 756px;
 				transition: opacity var(--opacity-duration) var(--opacity-ease);
