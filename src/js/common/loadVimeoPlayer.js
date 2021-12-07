@@ -10,7 +10,9 @@ export const loadVimeoPlayer = () => {
 
 		if(!!videoId) {
 			iframe.setAttribute('src', `${preUrlPath}${videoId}${urlPath}`);
+			iframe.removeAttribute('data-src');
 			document.querySelector('.video-toggle').classList.add('enable-toggle');
+
 			return true;
 		}
 	}

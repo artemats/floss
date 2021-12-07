@@ -33,6 +33,18 @@
 						opacity: 1;
 					}
 				}
+				&.is-loading{
+					.video{
+						&-btn{
+							&:before{
+								content: 'Loading';
+								color: var(--color-black);
+								background-image: none;
+								width: auto;
+							}
+						}
+					}
+				}
 		}
 		&-mask{
 			position: absolute;

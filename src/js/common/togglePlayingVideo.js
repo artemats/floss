@@ -11,7 +11,14 @@ export const togglePlayingVideo = () => {
 			if (videoBox.classList.contains('is-playing')) {
 				player.pause();
 			} else {
-				player.play();
+				player.play()
+					.then(() => {
+						console.log('Video are playing');
+					})
+					.catch(() => {
+						videoBox.classList.remove('enable-toggle');
+					})
+				videoBox.classList.add('is-loading');
 			}
 		}
 	});
@@ -32,6 +39,7 @@ export const togglePlayingVideo = () => {
 const onPlay = (videoBox, videoParentWrap) => {
 	videoBox.classList.add('is-playing', 'hide-button');
 	videoParentWrap.classList.add('hide-poster');
+	videoBox.classList.remove('is-loading');
 }
 
 const onPause = (videoBox) => {
