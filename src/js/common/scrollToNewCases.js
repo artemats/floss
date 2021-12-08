@@ -5,12 +5,14 @@ export const scrollToNewCases = () => {
 
 	if(currentPage > 1) {
 
-		const top = cases[cases.length - 6].getBoundingClientRect().y - 50;
-
-		window.scrollTo({
-			top,
-			behavior: 'smooth',
-		});
+		let a = ( ( currentPage - 1 ) * 6 ) + 1;
+		if(cases.length >= a) {
+			const top = cases[a - 1].getBoundingClientRect().y - 50;
+			window.scrollTo({
+				top,
+				behavior: 'smooth',
+			});
+		}
 
 	}
 
