@@ -21,6 +21,7 @@
 			flex-wrap: wrap;
 			position: relative;
 			z-index: 1;
+			min-height: 440px;
 				&-item{
 					width: 37%;
 					margin-bottom: 88px;
@@ -53,6 +54,9 @@
 								padding-bottom: 5px;
 							}
 					}
+				}
+				@include d($sxl){
+					min-height: 0;
 				}
 		}
 		&-body{

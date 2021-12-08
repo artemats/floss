@@ -67,9 +67,10 @@
 		}
 		&-carousel{
 			visibility: visible;
-			.splide__arrows{
-				display: none;
-			}
+			opacity: 0;
+				.splide__arrows{
+					display: none;
+				}
 		}
 }
 

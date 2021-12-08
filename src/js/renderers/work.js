@@ -5,11 +5,12 @@ import {tabsMobileCarousel} from "../common/tabsMobileCarousel";
 
 class WorkRenderer extends Highway.Renderer {
 	onEnter() {
-		tabsMobileCarousel();
+
 	}
 	onEnterCompleted() {
 		imageScaleOnScroll();
 		footerParallaxOnScroll();
+		tabsMobileCarousel();
 	}
 }
 
